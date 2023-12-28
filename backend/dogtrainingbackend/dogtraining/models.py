@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Create your models here.
 class Dog(models.Model):
-    photo = models.ImageField(upload_to="./images/", blank=True)
+    photo = models.ImageField(upload_to="images/", blank=True)
     name = models.CharField(max_length=30, blank=False)
     age = models.PositiveSmallIntegerField(default=1, validators=[MaxValueValidator(100)], blank=True)
     food = models.PositiveSmallIntegerField(default=0, validators=[MaxValueValidator(100)], blank=True)
