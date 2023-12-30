@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dogtraining',
     'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +134,11 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+
+CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:4173', 'http://localhost:4173']

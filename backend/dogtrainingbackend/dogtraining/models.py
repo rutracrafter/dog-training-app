@@ -11,4 +11,4 @@ class Dog(models.Model):
     food = models.PositiveSmallIntegerField(default=0, validators=[MaxValueValidator(100)], blank=True)
     progress = models.JSONField(blank=True)
     creation_date = models.DateTimeField(default=datetime.now)
-    owners = models.ManyToManyField(User)
+    owners = models.ManyToManyField(User, blank=True)

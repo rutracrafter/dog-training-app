@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { ReactDOM } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+    <BrowserRouter>
+        <Routes>
+            <Route>
+
+            </Route>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
