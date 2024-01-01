@@ -12,3 +12,6 @@ class Dog(models.Model):
     progress = models.JSONField(blank=True)
     creation_date = models.DateTimeField(default=datetime.now)
     owners = models.ManyToManyField(User, blank=True)
+
+    def __str__(self):
+        return f"{self.name}"
